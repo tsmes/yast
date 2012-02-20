@@ -1,11 +1,16 @@
 require "yast/version"
-require "builder"
-require "net/http"
-require "xmlsimple"
+require 'yast/configuration'
+
+# require "builder"
+# require "net/http"
+# require "xmlsimple"
+
 
 module Yast
-    mattr_accessor :username, :password, :hash,
-                 :timefrom, :timeto, :typeid, :parentid
+  extend Configuration
+
+  # mattr_accessor :username, :password, :hash,
+  #                :timefrom, :timeto, :typeid, :parentid
 
 
   class Record
